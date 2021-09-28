@@ -1,0 +1,13 @@
+numpy
+seaborn
+statsmodels
+scipy
+linearmodels
+scikit-learn
+pandas
+pingouin
+jupyter
+jupyter_contrib_nbextensions
+ipywidgets
+rpy2===3.4.4
+flake8
