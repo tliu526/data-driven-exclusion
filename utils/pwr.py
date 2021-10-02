@@ -1,15 +1,9 @@
 """
 Utility functions for power calculations.
 """
+
 import numpy as np
 from scipy.stats import norm
-
-# Rpy2 config: must be activated TODO better way to do this?
-from rpy2.robjects.packages import importr
-from rpy2.robjects import pandas2ri
-
-pandas2ri.activate()
-ivmodel_r = importr('ivmodel')
 
 
 # old imports
@@ -57,6 +51,13 @@ def iv_power(iv_df, tau, X=None, robust_se=False):
     Returns:
         float: estimated power given the data and treatment effect
     """
+    # Moving the import here because of weird static TLS error
+    from rpy2.robjects.packages import importr
+    from rpy2.robjects import pandas2ri
+
+    # Rpy2 config: must be activated TODO better way to do this?
+    pandas2ri.activate()
+    ivmodel_r = importr('ivmodel')
 
     if X is None:
         iv_r = ivmodel_r.ivmodel(Y=iv_df['Y'],
