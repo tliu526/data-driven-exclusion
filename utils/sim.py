@@ -130,8 +130,8 @@ def generate_IV_comply_indicator(n_samples, tau, seed=0,
 
     #Y = (tau + B)*T + C + np.random.normal(0, 1, n_samples)
 
-    # optionally add heteroskedastic noise
-    Y = (tau + B)*T + C + np.random.normal(0, 1, n_samples) + ((1-X) * np.random.normal(0, 1, n_samples))
+    # TODO optionally add heteroskedastic noise
+    Y = (tau + B)*T + C + np.random.normal(0, 1, n_samples) # + ((1-X) * np.random.normal(0, 1, n_samples))
 
     feat_df['Z'] = Z
     feat_df['X'] = X
