@@ -48,19 +48,17 @@ def generate_IV_comply_indicator(n_samples, tau, seed=0,
 
     Note from Baocchi et al. 2014 Eq 16 that "instrument strength" is equivalent to proportion of compliers.
 
-
     See this for simulating IVs:
         - https://statmodeling.stat.columbia.edu/2019/06/20/how-to-simulate-an-instrumental-variables-problem/
 
     Args:
         n_samples (int): the number of samples to generate
         tau (float): the treatment effect on compliers to measure
-        seed (int): see for reproducibility
+        seed (int): seed for reproducibility
         prop_nt (float): the proportion of never takers
         prop_at (float): the proportion of always takers, note that prop_comply is then 1 - prop_nt - prop_at
         prop_z (float): the proportion of individuals "encouraged" by the instrument
         C_T (float): the covariance between the confounder and treatment; only applies to compliers
-                     TODO is this an issue?
         Z_T (float): the covariance between the instrument and treatment
         use_covars (bool): whether or not to generate covariates that determine compliance
         regression_dict (dict): kwargs to pass to sklearn.make_regression, only used when use_covars=True
