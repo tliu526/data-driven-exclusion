@@ -1,6 +1,6 @@
 # Data-driven exclusion criteria for instrumental variables
 
-Code repository for "Data-driven exclusion criteria for instrumental variable studies," CLeaR 2022.
+Code repository for Data-driven exclusion criteria for instrumental variable studies [[OpenReview link]](https://openreview.net/forum?id=fW60Hu9yDve) to appear in [CLeaR 2022](https://www.cclear.cc/2022).
 
 Project structure:
 
